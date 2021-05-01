@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/********************************* Tags *********************************/
+
+body {
+	background-color: rgb(255, 251, 234);
+	color: rgb(70, 80, 70);
+}
+
+h1 {
+	text-align: center;
+}
+
+div {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+form {
+	margin-top: 30px;
+	margin-bottom: 75px;
+}
+
+li {
+	list-style: none;
+}
+
+/* Pour retrouver un fieldset (utilisé pour les retraits) un peu plus traditionnel que celui de Bootstrap */
+fieldset {
+	 all: initial;
+	 border: 1px solid black;
+	 padding : 5px 20px 10px 10px;
+	 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	 font-size: 1rem;
+} 
+
+legend {
+	all: initial;
+	color: black;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-size: 1rem;
+}
+
+
+/********************************* Classes *********************************/
+
+/* Conteneurs */
+.wrapper {
+	padding: 25px;
+	margin: auto;
+}
+
+.wrapper-lg {
+	max-width: 1500px;
+}
+
+.wrapper-md {
+	max-width: 1020px;
+}
+
+.wrapper-sm {
+	max-width: 520px;
+}
+
+/* Bandeau */
+.wrapper-bandeau {
+	padding: 25px;
+	margin: auto;
+	background-color: rgb(125, 188, 149);
+}
+
+.wrapper-bandeau {
+	font-weight: bold;
+}
+
+/* Menu */
+.menu-link, #monProfilLink {	
+	border-radius: 1rem;	
+	background-color: rgb(252, 197, 90);
+    color: rgb(255, 254, 253);
+}
+
+.menu-link:hover, #monProfilLink:hover {
+	text-decoration: none;
+	background-color: rgb(255, 254, 253);
+    color: rgb(43, 82, 61);
+}
+
+.menu-link {
+	margin: 5px 10px 7px 10px;		
+}
+
+/* Eléments généraux */
+
+.btn {
+	background-color: rgb(239, 239, 239);
+	border-color: rgb(118, 118, 118);
+	border-width: 1px;
+	transition: none!important;
+}
+
+.btn:hover {
+	background-color: rgb(229, 229, 229);
+	border-color: rgb(79, 79, 79);
+	border-width: 1px;
+}
+
+.btn-c2 {
+	background-color: rgb(252, 197, 90);
+	border-color: rgb(252, 197, 90);
+	border-width: 1px;
+	border-radius: 1rem;
+	transition: none!important;
+	color: rgb(255, 254, 253);	
+}
+
+.btn-c2:hover {
+	background-color: rgb(255, 222, 112)!important;
+	border-color: rgb(252, 197, 90);
+	border-width: 1px;
+	text-decoration: none;
+	color: rgb(70, 80, 70);
+}
+
+.post-btn {
+	display: inline-block;
+	margin: 0;
+}
+
+.btn-link, .art-link {
+	border: none;
+    cursor: pointer;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.height-100 {
+	height: 100%;
+}
+
+.content-centered {
+	text-align: center;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.espace {
+	margin-top: 45px;
+	margin-bottom: 45px; 
+}
+
+.readonly-input {
+	border: hidden;
+}
+
+.img {
+	background-color: rgb(125, 188, 149);
+	width: 170px;
+	height: 200px;
+	display: block;
+}
+
+.content-centered > form, .content-centered > button {
+	display: inline-block;
+	max-width: 250px;
+}
+
+.content-centered > a {
+	max-width: 90%;
+	margin-left: 1rem;
+}
+
+/* il y a un petit espace avant le lien sur la page de détails article (mais dû ni à du padding ni à margin) si cette marge négative n'est pas appliquée */
+.pseudo-link {
+    margin-left: -5px;
+}
+
+/********************************* Ids *********************************/
+
+/* Boutons et liens sous forme de bouton par id */
+#rechercher, #connexion, #creaCompte, #creationCompte, #annulerCreaCompte, #enregistrerArticle, #annulerEnregistrerArticle,
+	#retourProfil, #modifierProfil, #enregistrerModifProfil, #supprimerProfil, #retourModifProfil, #retourDetailArticle,
+	#modifierArticle, #supprimerArticle, #encherir {
+	border-radius: 1rem;
+	border-color: rgb(255, 254, 253);
+	border-style: solid;
+	border-width: 1px;
+	background-color: rgb(125, 188, 149);
+	margin-top: 10px;
+	margin-bottom: 10x;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	height: 40px;
+}
+
+#rechercher:hover, #connexion:hover, #creaCompte:hover, #creationCompte:hover, #annulerCreaCompte:hover, 
+	#enregistrerArticle:hover, #annulerEnregistrerArticle:hover, #retourProfil:hover, #modifierProfil:hover,
+	#enregistrerModifProfil:hover, #supprimerProfil:hover, #retourModifProfil:hover, #retourDetailArticle:hover,
+	#modifierArticle:hover, #supprimerArticle:hover, #encherir:hover {
+	cursor: pointer;
+	background-color: rgb(125, 188, 149);
+	color: rgb(255, 254, 253);
+}
+
+/* Divers */
+#encherir-disabled {
+	border-radius: 1rem;
+	border-color: rgb(255, 254, 253);
+	border-style: solid;
+	border-width: 1px;
+	background-color: rgb(44, 82, 62);
+	margin-top: 10px;
+	margin-bottom: 10x;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	height: 40px;
+	color: grey;
+	}
+
+#btn-link-div {
+	align-items: middlle;
+	vertical-align: middle;	
+}
+
+
+
+/* Sur des pages en particulier */
+
+/* connexion.jsp */
+#connexion-row {
+	text-align: center;
+}
+
+/* creationCompte.jsp */
+#boutons-crea-row {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;	
+}
+
+#boutons-crea-row > input, #boutons-crea-row > a {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 150px;
+}
+
+/* accueil.jsp */
+.menu a, .menu button {
+    display: block;
+    padding: 10px;
+}
+
+@media (min-width: 767px) {
+	.titre {
+		float: left;
+	}
+	.menu {
+		float: right;
+	}
+    .menu a, .menu button {
+        display: inline-block;
+    }
+}
+
+.card {
+	border-color: rgb(252, 197, 90);
+	border-width: 1px;
+}
+
+.art-link {
+	margin: 0;	
+}
+
+.art-btn-link {
+	font-weight: bold;
+	background-color: rgb(252, 197, 90);
+	color: rgb(70, 80, 70);
+	border-radius: 1rem;
+	text-decoration: none;
+}
+
+.art-btn-link:hover {
+	background-color: rgb(252, 197, 90);
+	color: white;
+}
+
+.vendeur-btn-link {
+	border-radius: 1rem;
+	border-color: rgb(255, 254, 253);
+	border-style: solid;
+	border-width: 1px;
+	background-color: rgb(125, 188, 149);
+	color: rgb(70, 80, 70);
+	text-decoration: none;
+}
+
+.vendeur-btn-link:hover {
+	cursor: pointer;
+	background-color: rgb(125, 188, 149);
+	color: rgb(255, 254, 253);
+}
+
+#logo {
+	max-height: 45px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Pour que les labels des checkboxes disabled soit gris sur l'accueil */
+:disabled + label {
+	color: grey;
+}
+
+/* profil.jsp */
+#monProfilForm {
+	margin: 5px 10px 7px 10px;
+	display: flex;
+}
+
+#monProfilLink {
+	font-weight: bold;
+	color: rgb(43, 82, 61);
+	border-radius: 1rem;
+	width: 100%;
+	display: inline-block;
+	color: rgb(255, 254, 253);
+}
